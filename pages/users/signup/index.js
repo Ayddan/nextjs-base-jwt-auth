@@ -86,22 +86,22 @@ const Singup = () => {
                 <h1>Sign up</h1>
                 <form onSubmit={(e)=>onSubmit(e)} method='POST'>
                     <div className="form-group">
-                        <label for="name">Nom</label>
-                        {!validName ? (<span className="error">Le nom n'est pas valide</span>) : null}
-                        <input className={`input-text ${!validName ? "error" : ""}`} name="name" type="text" onChange={(e)=>setName(e.target.value)} required/>
+                        <label for="name">Name</label>
+                        {!validName ? (<span className="error">Name is not valid</span>) : null}
+                        <input className={`input-text ${!validName ? "error" : ""}`} name="name" type="text" placeholder="Lana" onChange={(e)=>setName(e.target.value)} required/>
                     </div>
                     <div className="form-group">
                         <label for="email">Email</label>
-                        {!validEmail ? (<span className="error">L'email n'est pas valide</span>) : null}
-                        <input className={`input-text ${!validEmail ? "error" : ""}`} name="email" type="email" onChange={(e)=>setEmail(e.target.value)} required/>
+                        {!validEmail ? (<span className="error">Email is not valid</span>) : null}
+                        <input className={`input-text ${!validEmail ? "error" : ""}`} name="email" type="email" placeholder="email@hotmail.com" onChange={(e)=>setEmail(e.target.value)} required/>
                     </div>
                     <div className="form-group">
-                        <label for="password">Mot de passe</label>
-                        {!validPassword ? (<span className="error">Le mot de passe doit contenir au moins une majuscule et une minuscule, un charactere spécial (!@#$&*), un chiffre, et doit avoir une longueur de 8 characteres minimum</span>) : null}
+                        <label for="password">Password</label>
+                        {!validPassword ? (<span className="error">The password must contain at least one Uppercase and one Lowercase, on special character (!@#$&*), one number, a length  of 8</span>) : null}
                         <input className={`input-text ${!validPassword ? "error" : ""}`} name="password" type="password" onChange={(e)=>setPassword(e.target.value)} required/>
                     </div>
-                    <span>Vous possédez déjà un compte ? <Link href="/users/login" legacyBehavior><a>Se connecter</a></Link></span>
-                    <button className="button-1" type="submit">Envoyer</button>
+                    <span>Already registered ? <Link href="/users/login" legacyBehavior><a>Login</a></Link></span>
+                    <button className="button-1" type="submit">Send</button>
                 </form>
             </div>
             {error ? alert(error):null}

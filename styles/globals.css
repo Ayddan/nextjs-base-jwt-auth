@@ -15,6 +15,56 @@ a {
   box-sizing: border-box;
 }
 
+.login-card-wrapper{
+  width: 300px;
+  margin: 0 auto;
+}
+
+span.error{
+  color: red;
+  font-size: 13px;
+}
+input.input-text.error{
+  border: 2px solid red;
+}
+
+.login-card-wrapper label{
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-text{
+  width: 100%;
+  border: 2px solid rgb(38, 38, 38);
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.button-1{
+  display: block;
+  background-color: rgb(38, 38, 38);
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 15px;
+  margin-left: auto;
+  border: 1px solid rgb(38, 38, 38);
+  border-radius: 4px;
+  transition: background-color .3s ease, color .3s ease;
+}
+
+.button-1:hover{
+  cursor: pointer;
+  background-color: #fff;
+  color: rgb(38, 38, 38);
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

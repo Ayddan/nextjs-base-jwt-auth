@@ -18,7 +18,7 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-        <p>Connected as {user?user.name:""} {user?<a href='/users/logout' className={styles.card}>Logout</a>:""}</p>
+        <p>{user?("Connected as "+user.name):"Not connected"} {user?<a href='/users/logout' className={styles.card}>Logout</a>:""}</p>
 
         <p className={styles.description}>
           Try the auth base <a href="/users/signup" className={styles.card}>Sign Up</a><a href="/users/login" className={styles.card}>Login</a>

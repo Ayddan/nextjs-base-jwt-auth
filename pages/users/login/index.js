@@ -73,11 +73,11 @@ const Login = () => {
                         <input className="input-text" name="email" type="email" placeholder="email@hotmail.com" onChange={(e)=>setEmail(e.target.value)} required/>
                     </div>
                     <div className="form-group">
-                        <label for="password" >Mot de passe</label>
+                        <label for="password" >Password</label>
                         <input className="input-text" name="password" type="password" onChange={(e)=>setPassword(e.target.value)} required/>
                     </div>
-                    <p>Pas encore inscrit ? <Link href='/users/signup' legacyBehavior><a>s'inscrire</a></Link></p>
-                    <button className="button-1">Connexion</button>
+                    <p>no account ? <Link href='/users/signup' legacyBehavior><a>Sign Up</a></Link></p>
+                    <button className="button-1">Login</button>
                 </form>
             </div>
             {error ? alert(error):null}
