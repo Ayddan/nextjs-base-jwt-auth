@@ -1,8 +1,11 @@
+import React, { useContext } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { AuthContext } from './_app'
 
 export default function Home() {
+  const { user } = useContext(AuthContext)
   return (
     <div className={styles.container}>
       <Head>
@@ -15,10 +18,10 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+        <p>Connected as {user?user.name:""} {user?<a href='/users/logout' className={styles.card}>Logout</a>:""}</p>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+          Try the auth base <a href="/users/signup" className={styles.card}>Sign Up</a><a href="/users/login" className={styles.card}>Login</a>
         </p>
 
         <div className={styles.grid}>
